@@ -143,7 +143,7 @@ class Seeker: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UI
                     annotation.title = "This is where the hider hid."
                     mapView.addAnnotation(annotation)
                     
-                    let alert = UIAlertController(title: "Darn!", message: "You ran out of attempts and couldn't find the hider. You were \(distance) miles off.", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Darn!", message: "You ran out of attempts and couldn't find the hider. You were \(distance!) miles off.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (result: UIAlertAction) -> Void in
                         self.found = "no"
                         self.performSegue(withIdentifier: "gameOverS", sender: self)
@@ -230,6 +230,9 @@ class Seeker: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UI
                 let longitude:CLLocationDegrees = (message.object(forKey: "long") as! NSString).doubleValue
                 hiderSpot = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 spotChosen = true
+                let alert = UIAlertController(title: "Spot Selected!", message: "The hider has selected a spot. Get guessing!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         } catch {
             print(error)

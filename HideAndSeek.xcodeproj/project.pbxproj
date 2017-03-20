@@ -431,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y5YF33LJBG;
 				INFOPLIST_FILE = HideAndSeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kodikos.HideAndSeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y5YF33LJBG;
 				INFOPLIST_FILE = HideAndSeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kodikos.HideAndSeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,6 +526,7 @@
 				778FABE51E7F689100797F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		778FABE61E7F689100797F89 /* Build configuration list for PBXNativeTarget "HideAndSeekTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +535,7 @@
 				778FABE81E7F689100797F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		778FABE91E7F689100797F89 /* Build configuration list for PBXNativeTarget "HideAndSeekUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +544,7 @@
 				778FABEB1E7F689100797F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
