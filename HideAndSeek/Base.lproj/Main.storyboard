@@ -1,26 +1,251 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B1Q-uX-oFm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="gyG-Ro-dqy">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="B1Q-uX-oFm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mtE-PM-OR1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Siu-rL-euJ" kind="relationship" relationship="rootViewController" id="ijG-OB-lXb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjF-Ex-h9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279" y="319"/>
+        </scene>
+        <!--Connection-->
+        <scene sceneID="s36-av-Ai2">
+            <objects>
+                <viewController id="Siu-rL-euJ" customClass="Connection" customModule="HideAndSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="f4X-E8-sF7"/>
+                        <viewControllerLayoutGuide type="bottom" id="fX7-NR-twj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="z3N-Q4-8eH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-oa-ORh">
+                                <rect key="frame" x="113" y="310" width="148" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="KZY-nI-Ic8"/>
+                                    <constraint firstAttribute="height" constant="46" id="NeG-w7-xGh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectClicked:" destination="Siu-rL-euJ" eventType="touchUpInside" id="eyS-UN-6Ho"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dGj-oa-ORh" firstAttribute="centerY" secondItem="z3N-Q4-8eH" secondAttribute="centerY" id="nbX-lL-Mk3"/>
+                            <constraint firstItem="dGj-oa-ORh" firstAttribute="centerX" secondItem="z3N-Q4-8eH" secondAttribute="centerX" id="sym-JW-aZI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dLb-2n-7m3"/>
+                    <connections>
+                        <segue destination="ubl-Ul-xZi" kind="presentation" identifier="playerConnected" id="zVK-pa-qN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xo5-w1-wMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="319"/>
+        </scene>
+        <!--Choose Player-->
+        <scene sceneID="Ht9-i7-0oc">
+            <objects>
+                <viewController id="ubl-Ul-xZi" customClass="choosePlayer" customModule="HideAndSeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1xG-5j-hZG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPc-cX-07t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G5H-ly-sDL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-ND-YFk">
+                                <rect key="frame" x="136" y="177" width="102" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Gq9-w6-xii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
+                                <state key="normal" title="Hider"/>
+                                <connections>
+                                    <action selector="connectClicked:" destination="Siu-rL-euJ" eventType="touchUpInside" id="Fw9-zI-Rfv"/>
+                                    <action selector="hiderPressed:" destination="ubl-Ul-xZi" eventType="touchUpInside" id="lwP-D2-hdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjg-ya-4Ac">
+                                <rect key="frame" x="136" y="391" width="102" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="qhc-7c-4YZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
+                                <state key="normal" title="Seeker"/>
+                                <connections>
+                                    <action selector="connectClicked:" destination="Siu-rL-euJ" eventType="touchUpInside" id="mQu-hK-eWy"/>
+                                    <action selector="seekerPressed:" destination="ubl-Ul-xZi" eventType="touchUpInside" id="BUt-CN-0lE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKf-ND-YFk" firstAttribute="centerX" secondItem="G5H-ly-sDL" secondAttribute="centerX" id="1wZ-8y-P1R"/>
+                            <constraint firstItem="EKf-ND-YFk" firstAttribute="leading" secondItem="Cjg-ya-4Ac" secondAttribute="leading" id="GuS-7p-iXu"/>
+                            <constraint firstItem="EKf-ND-YFk" firstAttribute="top" secondItem="1xG-5j-hZG" secondAttribute="bottom" constant="157" id="Y1B-79-oJX"/>
+                            <constraint firstItem="CPc-cX-07t" firstAttribute="top" secondItem="Cjg-ya-4Ac" secondAttribute="bottom" constant="230" id="hHB-bv-h7d"/>
+                            <constraint firstItem="EKf-ND-YFk" firstAttribute="trailing" secondItem="Cjg-ya-4Ac" secondAttribute="trailing" id="n1j-LU-iEc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Oqt-4B-hF1" kind="presentation" identifier="hiderChosen" id="eUE-is-nZm"/>
+                        <segue destination="fPK-36-eQG" kind="presentation" identifier="seekerChosen" id="7Dz-eA-dE0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUd-Kh-YQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="319"/>
+        </scene>
+        <!--Seeker-->
+        <scene sceneID="aH9-jK-P7f">
+            <objects>
+                <viewController id="fPK-36-eQG" customClass="Seeker" customModule="HideAndSeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8la-LN-Shh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8C4-gD-eqt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F8H-bh-ft7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GEu-RZ-lNK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-kT-TWa">
+                                <rect key="frame" x="16" y="626" width="194" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="Guess Hiding Spot"/>
+                                <connections>
+                                    <action selector="guessHidingSpot:" destination="fPK-36-eQG" eventType="touchUpInside" id="Gfn-gJ-Flk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-xh-d0c">
+                                <rect key="frame" x="240" y="626" width="119" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="Get Hint"/>
+                                <connections>
+                                    <action selector="getHint:" destination="fPK-36-eQG" eventType="touchUpInside" id="tFx-VG-I6V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="GEu-RZ-lNK" id="qjg-dh-v6s"/>
+                        <segue destination="Y0M-WJ-li5" kind="presentation" identifier="gameOverS" id="nlI-0C-OM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzu-dZ-zNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309.5999999999999" y="682.3088455772114"/>
+        </scene>
+        <!--Current Location-->
+        <scene sceneID="eUc-gI-5SA">
+            <objects>
+                <viewController id="Oqt-4B-hF1" customClass="ViewController" customModule="HideAndSeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Q7-Dz-ybM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Htl-OI-swG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NMb-VC-syc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-CE-dsf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48q-oV-eXV">
+                                <rect key="frame" x="91" y="626" width="194" height="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="Select Hiding Spot"/>
+                                <connections>
+                                    <action selector="hidingSpotSelected:" destination="Oqt-4B-hF1" eventType="touchUpInside" id="9VB-c2-2f8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="48q-oV-eXV" firstAttribute="top" secondItem="JPP-CE-dsf" secondAttribute="bottom" constant="8" symbolic="YES" id="0CE-QI-FY2"/>
+                            <constraint firstItem="JPP-CE-dsf" firstAttribute="top" secondItem="NMb-VC-syc" secondAttribute="top" id="86C-0s-kbP"/>
+                            <constraint firstItem="48q-oV-eXV" firstAttribute="centerX" secondItem="JPP-CE-dsf" secondAttribute="centerX" id="AKz-bY-IeT"/>
+                            <constraint firstItem="Htl-OI-swG" firstAttribute="top" secondItem="48q-oV-eXV" secondAttribute="bottom" constant="11" id="Hbh-l1-ERK"/>
+                            <constraint firstItem="JPP-CE-dsf" firstAttribute="bottom" secondItem="Htl-OI-swG" secondAttribute="top" constant="-49" id="JTR-6V-uix"/>
+                            <constraint firstItem="JPP-CE-dsf" firstAttribute="leading" secondItem="NMb-VC-syc" secondAttribute="leading" id="oMO-kj-4zb"/>
+                            <constraint firstAttribute="trailing" secondItem="JPP-CE-dsf" secondAttribute="trailing" id="wHM-HE-xLo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Current Location" id="zyA-61-0dp"/>
+                    <connections>
+                        <outlet property="mapView" destination="JPP-CE-dsf" id="JAZ-fw-kch"/>
+                        <segue destination="Y0M-WJ-li5" kind="presentation" identifier="gameOverH" id="hot-lS-mAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1Z-OU-meT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309.5999999999999" y="-27.436281859070466"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zeU-kL-60y">
+            <objects>
+                <viewController id="Y0M-WJ-li5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ETM-QZ-hcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="JDU-8D-r8G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aFq-aW-Izj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-ZF-Nt1">
+                                <rect key="frame" x="137" y="315" width="101" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="OyZ-XJ-WTH"/>
+                                    <constraint firstAttribute="width" constant="101" id="h3l-Vb-mwU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3fY-ZF-Nt1" firstAttribute="centerX" secondItem="aFq-aW-Izj" secondAttribute="centerX" id="Sf7-Vk-FI7"/>
+                            <constraint firstItem="3fY-ZF-Nt1" firstAttribute="centerY" secondItem="aFq-aW-Izj" secondAttribute="centerY" id="Ykj-t7-z5c"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxc-tB-EIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2148" y="318.89055472263868"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nlI-0C-OM2"/>
+    </inferredMetricsTieBreakers>
 </document>

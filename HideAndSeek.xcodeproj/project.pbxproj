@@ -14,6 +14,10 @@
 		778FABC91E7F689100797F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778FABC71E7F689100797F89 /* LaunchScreen.storyboard */; };
 		778FABD41E7F689100797F89 /* HideAndSeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABD31E7F689100797F89 /* HideAndSeekTests.swift */; };
 		778FABDF1E7F689100797F89 /* HideAndSeekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABDE1E7F689100797F89 /* HideAndSeekUITests.swift */; };
+		778FABED1E7F68B000797F89 /* MPCHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABEC1E7F68B000797F89 /* MPCHandler.swift */; };
+		778FABEF1E7F68E100797F89 /* Seeker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABEE1E7F68E100797F89 /* Seeker.swift */; };
+		778FABF11E7F691700797F89 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABF01E7F691700797F89 /* Connection.swift */; };
+		778FABF31E7F693300797F89 /* choosePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778FABF21E7F693300797F89 /* choosePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		778FABDA1E7F689100797F89 /* HideAndSeekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HideAndSeekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		778FABDE1E7F689100797F89 /* HideAndSeekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideAndSeekUITests.swift; sourceTree = "<group>"; };
 		778FABE01E7F689100797F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		778FABEC1E7F68B000797F89 /* MPCHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCHandler.swift; sourceTree = "<group>"; };
+		778FABEE1E7F68E100797F89 /* Seeker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seeker.swift; sourceTree = "<group>"; };
+		778FABF01E7F691700797F89 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		778FABF21E7F693300797F89 /* choosePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = choosePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				778FABBE1E7F689100797F89 /* AppDelegate.swift */,
+				778FABF01E7F691700797F89 /* Connection.swift */,
+				778FABF21E7F693300797F89 /* choosePlayer.swift */,
 				778FABC01E7F689100797F89 /* ViewController.swift */,
+				778FABEC1E7F68B000797F89 /* MPCHandler.swift */,
+				778FABEE1E7F68E100797F89 /* Seeker.swift */,
 				778FABC21E7F689100797F89 /* Main.storyboard */,
 				778FABC51E7F689100797F89 /* Assets.xcassets */,
 				778FABC71E7F689100797F89 /* LaunchScreen.storyboard */,
@@ -193,6 +205,7 @@
 				TargetAttributes = {
 					778FABBA1E7F689000797F89 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y5YF33LJBG;
 						ProvisioningStyle = Automatic;
 					};
 					778FABCE1E7F689100797F89 = {
@@ -261,6 +274,10 @@
 			files = (
 				778FABC11E7F689100797F89 /* ViewController.swift in Sources */,
 				778FABBF1E7F689100797F89 /* AppDelegate.swift in Sources */,
+				778FABF11E7F691700797F89 /* Connection.swift in Sources */,
+				778FABF31E7F693300797F89 /* choosePlayer.swift in Sources */,
+				778FABEF1E7F68E100797F89 /* Seeker.swift in Sources */,
+				778FABED1E7F68B000797F89 /* MPCHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y5YF33LJBG;
 				INFOPLIST_FILE = HideAndSeek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kodikos.HideAndSeek;
@@ -424,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y5YF33LJBG;
 				INFOPLIST_FILE = HideAndSeek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kodikos.HideAndSeek;
